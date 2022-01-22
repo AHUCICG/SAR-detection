@@ -1,16 +1,9 @@
-# Read the docs:
+# Abstract
+Synthetic aperture radar (SAR) image target detection has a wide range of application values ​​in military/civilian fields. However, the strong speckle noise in SAR images suppresses the low-level edge feature representation, and has the characteristics of complex background interference, sparse target distribution, and multi-scale targets. Existing SAR target detection algorithms are difficult to achieve a balance between speed and accuracy. To this end, this paper designs a multi-dimensional reinforcement learning anchor-free SAR target detection algorithm, called MDSAR, to balance the improvement of SAR target detection performance in complex backgrounds. First, in view of the small amount of SAR target data and the small target, we design a copy-and-paste method with semantic relationship for data enhancement; Secondly, the latest anchor-free target detection framework CenterNet2 is introduced as the benchmark, and a new feature enhancement lightweight backbone, called LWBackbone, is designed, which reduces the amount of parameters of the model and effectively extracts the salient features of SAR targets; Further, a new mixed-domain attention mechanism, called CNAM, is proposed, which can effectively suppress the interference of complex terrestrial background and highlight the target area; Finally, we construct a receptive field enhancement detection head module, called RFEHead, which aims to improve the multi-scale perception performance of the detection head. The experimental results of ablation on the SSDD dataset show that the mAP of our method reaches 97.9%, and it has a lower computational complexity, reaching SOTA. Furthermore, on our constructed semantic relational data augmentation dataset ASSDD, our mAP reaches 98.6%, and the FPS can reach 20 frames per second.
+# 参考代码
+https://github.com/xingyizhou/CenterNet2
+# ASSDD 
+链接：https://pan.baidu.com/s/1E4MTFXUE7wbwsv1Dus8elQ  提取码：CICG 
 
-The latest documentation built from this directory is available at [detectron2.readthedocs.io](https://detectron2.readthedocs.io/).
-Documents in this directory are not meant to be read on github.
 
-# Build the docs:
 
-1. Install detectron2 according to [INSTALL.md](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md).
-2. Install additional libraries required to build docs:
-  - docutils==0.16
-  - Sphinx==3.0.0
-  - recommonmark==0.6.0
-  - sphinx_rtd_theme
-  - mock
-
-3. Run `make html` from this directory.
